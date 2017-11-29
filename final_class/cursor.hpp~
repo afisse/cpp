@@ -1,0 +1,16 @@
+using namespace std;
+
+class Cursor;
+class CursorImpl {
+private:
+  CursorImpl () {}
+  friend class Cursor;
+public:
+  int count ();
+  //void saySomething (std::string something x);
+};
+ 
+class Cursor : public virtual CursorImpl {
+public:
+  int count ();
+};

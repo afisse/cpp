@@ -1,0 +1,14 @@
+#include "cursor.hpp"
+#include <iostream>
+
+using namespace std;
+
+class MyCursor : Cursor {
+  MyCursor (){}
+};
+
+int main (){
+  Cursor c;
+  cout << c.count() << endl;
+  return 0;
+}

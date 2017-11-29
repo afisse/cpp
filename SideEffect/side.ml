@@ -1,0 +1,7 @@
+let _ = 
+let x = ref 3 in
+let foo () = x := 13 in
+let bar () = x := 14 in
+let funn a b = () in
+funn (foo(), bar());
+print_endline (string_of_int !x)

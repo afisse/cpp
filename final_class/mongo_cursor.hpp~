@@ -1,0 +1,4 @@
+#ifndef mongo_cursor_h
+#define mongo_cursor_h
+
+endif

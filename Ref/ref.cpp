@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+ 
+int main () {
+  int i = 10;
+  int &ri = i;
+  int *pi1 = &i;
+  int *pi2 = &ri;
+  cout << i << endl;
+  cout << ri << endl;
+  cout << pi1 << endl;
+  cout << pi2 << endl;
+  cout << *pi1 << endl;
+  cout << *pi2 << endl;
+}

@@ -1,0 +1,10 @@
+#include "mongo_cursor.hpp"
+
+class MongoCursor {
+public:
+  MongoCursor();
+  int count;
+  bool compare (MongoCursor c);
+}
+
+#endif

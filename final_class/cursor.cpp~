@@ -1,0 +1,12 @@
+#include "cursor.hpp"
+#include <iostream>
+
+using namespace std;
+
+int CursorImpl::count () {
+  return 42;
+}
+
+int Cursor::count () {
+  return CursorImpl::count();
+}

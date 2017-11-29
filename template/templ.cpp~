@@ -1,0 +1,43 @@
+#include <string>
+#include <iostream>
+#include <stdexcept>
+
+class MyException {
+public:
+  MyException(){};
+  virtual void show(){
+    std::cout << "MyException" << std::endl;
+  };
+};
+
+class MyRuntimeException : public MyException {
+public:
+  MyRuntimeException(std::string s){
+    this->msg = s;
+  };
+  void show(){
+    std::cout << this->msg << std::endl;
+  };
+private:
+  std::string msg;
+};
+
+template <typename U>
+std::string throwConvertedMongoException(std::string x, U ex)
+{
+  if (x.empty()){
+    ex.show();
+  }
+  return x;
+}
+
+template <typename F>
+void bar(F f)
+{
+  std::cout << "bar=" << f("",MyRuntimeException("empty!?!?!")) << std::endl;
+}
+
+int main(){
+  bar(throwConvertedMongoException<MyException>);
+  return 0;
+}

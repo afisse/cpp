@@ -1,0 +1,12 @@
+
+
+class Cursor;
+class CursorImpl {
+private:
+  CursorImpl () {}
+  friend class Cursor;
+public:
+  int count ();
+  //void saySomething (std::string something x);
+};
+ 

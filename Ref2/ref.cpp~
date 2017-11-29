@@ -1,0 +1,4 @@
+enum day
+{
+  Sunday, Monday, Tuesday, Wednesdau, Thursday, Friday, Saturday, Sunday
+};
